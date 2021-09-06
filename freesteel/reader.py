@@ -20,10 +20,10 @@
 #		MA 02110-1301, USA.
 
 import smartcard.scard as scard
-from card import Card, GemaltoCard
+from .card import Card, GemaltoCard
 from threading import Thread
-from exceptions import GetContextError, ReleaseContextError, GetReaderListError
-from exceptions import ConnectCardError, GetReaderStatusError, EmptyReaderListError
+from .exceptions import GetContextError, ReleaseContextError, GetReaderListError
+from .exceptions import ConnectCardError, GetReaderStatusError, EmptyReaderListError
 from smartcard import Session
 
 APOLLO_CARD_ATR = str([

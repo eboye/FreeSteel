@@ -21,7 +21,7 @@
 
 import smartcard.scard as scard
 
-from exceptions import GetDataError, SelectPathError, DisconnectCardError
+from .exceptions import GetDataError, SelectPathError, DisconnectCardError
 
 class CardCommand:
 	GET_DATA_0101 = [0x00, 0xCA, 0x01, 0x01, 0x20]

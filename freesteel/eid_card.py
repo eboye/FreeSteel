@@ -21,7 +21,7 @@
 
 import smartcard.util as scard_util
 
-from card import CardCommand as Command
+from .card import CardCommand as Command
 
 
 class CardFile:
@@ -96,7 +96,7 @@ class EidCard:
 		"""Get fields in human readable format"""
 		fields = self.__split_fields(data)
 
-		for name, value in fields.items():
+		for name, value in list(fields.items()):
 			fields[name] = scard_util.toASCIIString(value)
 
 		return fields
